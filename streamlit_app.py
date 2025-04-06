@@ -452,17 +452,9 @@ st.title("Air Quality Data Forecaster")
 
 # === Navigation Sidebar ===
 st.sidebar.title("Navigation")
-
-# About Button on Sidebar
+    
+    
 if st.sidebar.button("About"):
-    st.session_state.show_about = True
-
-# Display About Section Automatically on First Load
-if "show_about" not in st.session_state:
-    st.session_state.show_about = True
-    
-    
-if st.session_state.show_about:
     st.session_state.page = "About"
     st.header("About This Project")
 
