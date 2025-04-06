@@ -462,7 +462,7 @@ if "show_about" not in st.session_state:
     st.session_state.show_about = True
     
     
-if st.session_state.show_about::
+if st.session_state.show_about:
     st.session_state.page = "About"
     st.header("About This Project")
 
