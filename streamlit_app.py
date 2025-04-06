@@ -257,9 +257,6 @@ def generate_station_eda(df, station_name):
         st.error(f"Error generating EDA for {station_name}: {e}")
 
 
-from io import StringIO
-from prophet import Prophet
-
 def forecast_station_prophet(df, station_name):
     try:
         st.subheader(f"90-Day AQI Forecast - {station_name}")
@@ -414,6 +411,7 @@ def evaluate_forecast_station(df, station_name):
     except Exception as e:
         st.error(f"Error evaluating forecast for {station_name}: {e}")
 
+
 # Streamlit App
 def clean_and_display_data():
     all_locations = fetch_paginated_data(BASE_LOCATION_URL)
@@ -455,7 +453,12 @@ st.title("Air Quality Data Forecaster")
 # === Navigation Sidebar ===
 st.sidebar.title("Navigation")
 
+# Check if page is already set in session state, else default to "About"
+if "page" not in st.session_state:
+    st.session_state.page = "About"
+    
 if st.sidebar.button("About"):
+    st.session_state.page = "About"
     st.header("About This Project")
 
     st.markdown("""
