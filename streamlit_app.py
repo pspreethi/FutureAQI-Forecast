@@ -462,6 +462,13 @@ if st.sidebar.button("About"):
     ### Project Overview
     This project aims to forecast Air Quality Index (AQI) for major Indian cities using historical data. The predictions are based on consistent AQI data collected from various monitoring stations.
 
+    ### Data Source:
+    We use data from [OpenAQ API](https://docs.openaq.org/) to fetch real-time AQI readings from licensed sensors.
+    
+    ### More Information:
+    - Visit the official [OpenAQ website](https://openaq.org/) for more details on global air quality data.
+    - Check the [OpenAQ API Documentation](https://docs.openaq.org/) for technical specifications and available endpoints.
+    
     ### Assumptions
     - All sensor locations are stationary in India.
     - Only 6 sensor locations have a valid license.
@@ -471,10 +478,10 @@ if st.sidebar.button("About"):
     - Only sensors measuring **PM2.5** (Particulate Matter with diameter < 2.5 µm) are considered.
 
     ### Why AirNow Provider?
-    Initially, we considered using data from the **Central Pollution Control Board (CPCB)**. However:
-    - CPCB data was inconsistent and contained gaps over long periods.
-    - AirNow data, although limited to major cities, proved to be more consistent and accurate.
-    - Therefore, **AirNow** data was chosen for reliable forecasting.
+    Why AirNow Provider?
+    - AirNow data is more consistent and reliable for AQI forecasting.
+    - Although it is limited to major cities, it offers accurate and continuous measurements.
+    - This consistency makes it suitable for forecasting and data analysis.
 
     ### Data Pipeline
     1. **Data Fetching:** Fetches data from OpenAQ using their API.
