@@ -2,6 +2,9 @@
 
 A comprehensive pipeline and forecasting tool for analyzing air quality (PM2.5) data from major cities in India using the OpenAQ API. The project fetches licensed sensor data, performs exploratory data analysis (EDA), and applies time series forecasting using Facebook Prophet, with an interactive dashboard built on Streamlit.
 
+[Launch the App here](https://futureaqi-forecast.streamlit.app/)  
+[Behind the build](https://medium.com/@pokasaipreethi/data-dust-and-a-podcast-detour-into-air-quality-forecasting-3bc29a90ed3b)
+
 ---
 
 ## Features
